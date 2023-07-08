@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+    --fontFamily: 'League Spartan', sans-serif;
+    --veryDarkVioletMainBackground: hsl(268, 75%, 9%);
+    --veryDarkVioletToggleBackground-KeypadBackground-screenBackground: hsl(268, 71%, 12%);
+    --darkVioletKeyBackground: hsl(281, 89%, 26%);
+    --vividMagenta-keyShadow: hsl(285, 91%, 52%);
+    --pureCyan-keyBackground-toggle: hsl(176, 100%, 44%);
+    --softCyan-keyShadow: hsl(177, 92%, 70%);
+    --veryDarkViolet-keyBackground: hsl(268, 47%, 21%);
+    --darkMagenta-keyShadow: hsl(290, 70%, 36%);
+    --textLightYellow: hsl(52, 100%, 62%);
+    --textVeryDarkBlue: hsl(198, 20%, 13%);
+    --textWhite: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--veryDarkVioletMainBackground);
+    font-family: var(--fontFamily);
+    font-weight: 700;
+}
+
+.calculator {
+
+    width: 31%;
+    height: 20%;
+    justify-content: space-between;
+    margin: 6rem auto 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.calculator-div p {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    padding: 35px 20px 0 0;
+    font-size: 45px;
+    color: var(--textLightYellow);
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    overflow-y: auto;
+    text-align: right;
+    background-color: var(--veryDarkVioletToggleBackground-KeypadBackground-screenBackground);
+}
+
+.buttons {
+    background-color: var(--veryDarkVioletToggleBackground-KeypadBackground-screenBackground);
+    width: 30%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 1em;
+    color: var(--textVeryDarkBlue);
+    font-family: var(--fontFamily);
+    font-weight: 700;
+    place-content: center;
+    
+}
+.button{
+    cursor: pointer;
+    color: var(--textLightYellow);
+    background-color: var(--veryDarkViolet-keyBackground);
+    box-shadow: 0 2px var(--vividMagenta-keyShadow);
+    padding: 10px 5px;
+    font-size: 25px;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+}
+.button:hover{
+    background-color: var(--darkVioletKeyBackground);
+}
+.button-del, .button-reset{
+    color: var(--textWhite);
+    background-color: var(--darkMagenta-keyShadow);
+    box-shadow: 0 2px var(--vividMagenta-keyShadow);
+    padding-top: 15px;
+}
+.button-del:hover, .button-reset:hover{
+    background-color: var(--vividMagenta-keyShadow);
+}
+.button-reset{
+  grid-column: 1/3;
+}
+.button-total{
+    background-color: var(--pureCyan-keyBackground-toggle);
+   grid-column: 3/5;
+   padding-top: 15px;
+   box-shadow: 0 2px var(--softCyan-keyShadow);
+   color: var(--veryDarkVioletToggleBackground-KeypadBackground-screenBackground);
+}
+.button-total:hover{
+    background-color: var(--softCyan-keyShadow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
