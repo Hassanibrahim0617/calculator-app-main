@@ -28,10 +28,8 @@ body {
 }
 
 .calculator {
-
     width: 31%;
     height: 20%;
-    justify-content: space-between;
     margin: 6rem auto 20px auto;
     border-radius: 10px;
     padding: 10px;
@@ -55,7 +53,6 @@ body {
 .buttons {
     background-color: var(--veryDarkVioletToggleBackground-KeypadBackground-screenBackground);
     width: 30%;
-    height: 40%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
@@ -73,8 +70,8 @@ body {
     cursor: pointer;
     color: var(--textLightYellow);
     background-color: var(--veryDarkViolet-keyBackground);
-    box-shadow: 0 2px var(--vividMagenta-keyShadow);
-    padding: 10px 5px;
+    box-shadow: 0 4px var(--darkMagenta-keyShadow);
+    padding: 15px 3px 10px 3px;
     font-size: 25px;
     border-radius: 8px;
     border: none;
@@ -87,7 +84,7 @@ body {
 .button-del, .button-reset{
     color: var(--textWhite);
     background-color: var(--darkMagenta-keyShadow);
-    box-shadow: 0 2px var(--vividMagenta-keyShadow);
+    box-shadow: 0 4px var(--vividMagenta-keyShadow);
     padding-top: 15px;
 }
 .button-del:hover, .button-reset:hover{
@@ -100,7 +97,7 @@ body {
     background-color: var(--pureCyan-keyBackground-toggle);
    grid-column: 3/5;
    padding-top: 15px;
-   box-shadow: 0 2px var(--softCyan-keyShadow);
+   box-shadow: 0 4px var(--softCyan-keyShadow);
    color: var(--veryDarkVioletToggleBackground-KeypadBackground-screenBackground);
 }
 .button-total:hover{
@@ -108,19 +105,29 @@ body {
 }
 
 
+/* mobile styling */
+@media (max-width:1000px) {
+   .calculator{
+width: 92%;
+}
 
+.buttons{
+  width: 88%;
+}
 
+.button{
+    font-size: 40px;
+    padding: 20px 7px 15px;
+}
+.button-del, .button-reset, .button-total{
+    font-size: 20px;
+}
+.button-reset, .button-total{
+    padding: 25px 7px;
+} 
+}
 
-
-
-
-
-
-
-
-
-
-
+/* attribution */
 .attribution {
     font-size: 11px;
     text-align: center;
